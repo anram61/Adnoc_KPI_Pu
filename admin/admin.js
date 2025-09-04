@@ -1,4 +1,4 @@
-const OPENAI_API_KEY = "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";
+const OPENAI_API_KEY = "";
 const STORAGE_KEYS = {
   REPORTS: 'adnoc_reports',
   LATEST: 'adnoc_latest',
