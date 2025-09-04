@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ADNOC KPI Viewer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="animated-line left-line"></div>
+  <div class="animated-line right-line"></div>
+
+  <header>
+    <img src="assets/adnoc-logo.png" alt="ADNOC Logo" class="logo" />
+    <h1>KPI Report Viewer</h1>
+  </header>
+
+  <main>
+    <section class="section-header">
+      <h2>📊 View KPI Reports</h2>
+      <p>Select a company to view the summary.</p>
+      <p><a href="admin/admin.html" target="_blank" class="admin-link">➕ Generate New Report</a></p>
+    </section>
+
+    <section class="controls">
+      <div class="company-buttons">
+        <button class="company" data-company="Adnoc Onshore">Adnoc Onshore</button>
+        <button class="company" data-company="Adnoc Offshore">Adnoc Offshore</button>
+        <button class="company" data-company="Adnoc Al Dhafra & Al Yasat">Adnoc Al Dhafra & Al Yasat</button>
+        <button class="company" data-company="Adnoc Drilling">Adnoc Drilling</button>
+        <button class="company" data-company="Adnoc Sour Gas">Adnoc Sour Gas</button>
+        <button class="company" data-company="Adnoc Refining">Adnoc Refining</button>
+        <button class="company" data-company="Adnoc Distribution">Adnoc Distribution</button>
+        <button class="company ytd-button" data-company="Year to date Average">📈 Year to date Average</button>
+        <button class="company" data-company="Adnoc Borouge">Adnoc Borouge</button>
+        <button class="company" data-company="Adnoc L&S">Adnoc L & S</button>
+        <button class="company" data-company="Adnoc Global Trading">Adnoc Global Trading</button>
+        <button class="company" data-company="GBDO">GBDO</button>
+        <button class="company" data-company="Adnoc Gas">Adnoc Gas</button>
+      </div>
+      <button id="delete-generated-report-btn">Delete Generated Report</button>
+      <div class="month-selector">
+        <select id="month-dropdown">
+          <option value="">-- Select Month --</option>
+          <option>January</option>
+          <option>February</option>
+          <option>March</option>
+          <option>April</option>
+          <option>May</option>
+          <option>June</option>
+          <option>July</option>
+          <option>August</option>
+          <option>September</option>
+          <option>October</option>
+          <option>November</option>
+          <option>December</option>
+        </select>
+      </div>
+    </section>
+
+    <section class="report-box" id="report-box">
+      <h3>📂 Report Summary</h3>
+      <p><strong>Company:</strong> <span id="report-company">N/A</span></p>
+      <div id="report-text">
+        <p>Please select a company to see the KPI summary.</p>
+      </div>
+      
+      <div id="pdf-viewer-container"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 ADNOC. All rights reserved.</p>
+  </footer>
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.14.305/pdf.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.14.305/pdf.worker.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
